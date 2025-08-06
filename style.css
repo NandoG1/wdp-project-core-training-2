@@ -1122,6 +1122,8 @@ body {
 	height: 280px;
 	perspective: 1000px;
 	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .card-inner {
@@ -1165,6 +1167,8 @@ body {
 	justify-content: flex-start;
 	text-align: left;
 	padding: 2rem;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .card-icon {
@@ -1384,6 +1388,130 @@ body {
 	.education-card {
 		width: 340px;
 		height: 260px;
+	}
+}
+
+@media (max-width: 900px) {
+	.education-cards {
+		gap: 1.5rem;
+	}
+
+	.education-card {
+		width: 320px;
+		height: 280px;
+	}
+
+	.card-front,
+	.card-back {
+		padding: 2rem 1.5rem;
+	}
+
+	.action-title {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.action-list li {
+		font-size: 0.95rem;
+		margin-bottom: 0.75rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.education-section {
+		padding: 4rem 0;
+	}
+
+	.education-title {
+		font-size: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.education-cards {
+		gap: 1.5rem;
+	}
+
+	.education-card {
+		width: 100%;
+		max-width: 350px;
+		height: 320px;
+	}
+
+	.card-front,
+	.card-back {
+		padding: 2rem 1.5rem;
+	}
+
+	.card-title {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.card-description {
+		font-size: 0.95rem;
+	}
+
+	.action-title {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.action-list li {
+		font-size: 0.9rem;
+		margin-bottom: 0.75rem;
+		line-height: 1.4;
+	}
+}
+
+@media (max-width: 480px) {
+	.education-container {
+		padding: 0 1rem;
+	}
+
+	.education-cards {
+		gap: 1rem;
+	}
+
+	.education-card {
+		width: 100%;
+		max-width: 320px;
+		height: 350px;
+	}
+
+	.card-front,
+	.card-back {
+		padding: 1.5rem 1.25rem;
+	}
+
+	.card-icon {
+		padding: 12px;
+		margin-bottom: 1.5rem;
+	}
+
+	.card-icon svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	.card-title {
+		font-size: 1.2rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.card-description {
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	.action-title {
+		font-size: 1.2rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.action-list li {
+		font-size: 0.85rem;
+		margin-bottom: 0.6rem;
+		line-height: 1.3;
 	}
 }
 
