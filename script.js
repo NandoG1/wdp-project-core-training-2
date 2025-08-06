@@ -241,3 +241,131 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+// Navigation menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+	const navItems = document.querySelectorAll('.nav-menu li');
+	
+	navItems.forEach(item => {
+		item.addEventListener('click', function() {
+			// Remove active class from all items
+			navItems.forEach(nav => nav.classList.remove('active'));
+			// Add active class to clicked item
+			this.classList.add('active');
+		});
+	});
+
+	// LinkedIn button functionality
+	const linkedinBtn = document.querySelector('.linkedin-btn');
+	linkedinBtn.addEventListener('click', function() {
+		// Add a subtle animation effect
+		this.style.transform = 'scale(0.98) translateY(-1px)';
+		setTimeout(() => {
+			this.style.transform = 'translateY(-1px)';
+		}, 150);
+		
+		// You can add actual LinkedIn URL here
+		// window.open('https://linkedin.com/in/your-profile', '_blank');
+		console.log('LinkedIn button clicked');
+	});
+
+	// Add smooth scroll behavior for potential future sections
+	document.documentElement.style.scrollBehavior = 'smooth';
+});
+
+// Skills section functionality
+function showTab(tabName) {
+	// Update tab buttons
+	const tabButtons = document.querySelectorAll('.tab-button');
+	tabButtons.forEach(button => button.classList.remove('active'));
+	
+	// Find the clicked button and make it active
+	const clickedButton = Array.from(tabButtons).find(btn => 
+		btn.textContent.toLowerCase().includes(tabName.toLowerCase())
+	);
+	if (clickedButton) {
+		clickedButton.classList.add('active');
+	}
+
+	// Update tab content with smooth animation
+	const tabContents = document.querySelectorAll('.tab-content');
+	tabContents.forEach(content => {
+		content.classList.remove('active');
+	});
+
+	// Add a small delay for smooth transition
+	setTimeout(() => {
+		const targetTab = document.getElementById(tabName + '-skills');
+		if (targetTab) {
+			targetTab.classList.add('active');
+			// Animate progress bars
+			animateProgressBars();
+		}
+	}, 200);
+}
+
+function animateProgressBars() {
+	const activeTab = document.querySelector('.tab-content.active');
+	if (activeTab) {
+		const progressBars = activeTab.querySelectorAll('.skill-progress-fill');
+		
+		progressBars.forEach((bar, index) => {
+			const width = bar.style.width;
+			bar.style.width = '0%';
+			setTimeout(() => {
+				bar.style.width = width;
+			}, index * 100);
+		});
+	}
+}
+
+// Add click event listeners to tab buttons
+document.addEventListener('DOMContentLoaded', function() {
+	// Initialize progress bar animation on page load
+	setTimeout(() => {
+		animateProgressBars();
+	}, 1000);
+
+	// Add event listeners to tab buttons
+	const tabButtons = document.querySelectorAll('.tab-button');
+	tabButtons.forEach(button => {
+		button.addEventListener('click', function() {
+			const buttonText = this.textContent.toLowerCase();
+			if (buttonText.includes('technical')) {
+				showTab('technical');
+			} else if (buttonText.includes('soft')) {
+				showTab('soft');
+			}
+		});
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+	const navItems = document.querySelectorAll('.nav-menu li');
+	
+	navItems.forEach(item => {
+		item.addEventListener('click', function() {
+			// Remove active class from all items
+			navItems.forEach(nav => nav.classList.remove('active'));
+			// Add active class to clicked item
+			this.classList.add('active');
+		});
+	});
+
+	// LinkedIn button functionality
+	const linkedinBtn = document.querySelector('.linkedin-btn');
+	linkedinBtn.addEventListener('click', function() {
+		// Add a subtle animation effect
+		this.style.transform = 'scale(0.98) translateY(-1px)';
+		setTimeout(() => {
+			this.style.transform = 'translateY(-1px)';
+		}, 150);
+		
+		// You can add actual LinkedIn URL here
+		// window.open('https://linkedin.com/in/your-profile', '_blank');
+		console.log('LinkedIn button clicked');
+	});
+
+	// Add smooth scroll behavior for potential future sections
+	document.documentElement.style.scrollBehavior = 'smooth';
+});

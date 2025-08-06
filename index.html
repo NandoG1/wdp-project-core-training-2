@@ -39,12 +39,12 @@
                 user-centered design principles and enjoy solving complex problems with 
                 elegant solutions.
             </p>
-            <button class="linkedin-btn">
+            <a href="" class="linkedin-btn">
                 <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
                 </svg>
                 Connect on LinkedIn              
-            </button>
+            </a>
         </section>
 
         <section class="avatar-section">
@@ -447,136 +447,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Navigation menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navItems = document.querySelectorAll('.nav-menu li');
-            
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Remove active class from all items
-                    navItems.forEach(nav => nav.classList.remove('active'));
-                    // Add active class to clicked item
-                    this.classList.add('active');
-                });
-            });
-
-            // LinkedIn button functionality
-            const linkedinBtn = document.querySelector('.linkedin-btn');
-            linkedinBtn.addEventListener('click', function() {
-                // Add a subtle animation effect
-                this.style.transform = 'scale(0.98) translateY(-1px)';
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-1px)';
-                }, 150);
-                
-                // You can add actual LinkedIn URL here
-                // window.open('https://linkedin.com/in/your-profile', '_blank');
-                console.log('LinkedIn button clicked');
-            });
-
-            // Add smooth scroll behavior for potential future sections
-            document.documentElement.style.scrollBehavior = 'smooth';
-        });
-
-        // Skills section functionality
-        function showTab(tabName) {
-            // Update tab buttons
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => button.classList.remove('active'));
-            
-            // Find the clicked button and make it active
-            const clickedButton = Array.from(tabButtons).find(btn => 
-                btn.textContent.toLowerCase().includes(tabName.toLowerCase())
-            );
-            if (clickedButton) {
-                clickedButton.classList.add('active');
-            }
-
-            // Update tab content with smooth animation
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Add a small delay for smooth transition
-            setTimeout(() => {
-                const targetTab = document.getElementById(tabName + '-skills');
-                if (targetTab) {
-                    targetTab.classList.add('active');
-                    // Animate progress bars
-                    animateProgressBars();
-                }
-            }, 200);
-        }
-
-        function animateProgressBars() {
-            const activeTab = document.querySelector('.tab-content.active');
-            if (activeTab) {
-                const progressBars = activeTab.querySelectorAll('.skill-progress-fill');
-                
-                progressBars.forEach((bar, index) => {
-                    const width = bar.style.width;
-                    bar.style.width = '0%';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, index * 100);
-                });
-            }
-        }
-
-        // Add click event listeners to tab buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize progress bar animation on page load
-            setTimeout(() => {
-                animateProgressBars();
-            }, 1000);
-
-            // Add event listeners to tab buttons
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const buttonText = this.textContent.toLowerCase();
-                    if (buttonText.includes('technical')) {
-                        showTab('technical');
-                    } else if (buttonText.includes('soft')) {
-                        showTab('soft');
-                    }
-                });
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const navItems = document.querySelectorAll('.nav-menu li');
-            
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Remove active class from all items
-                    navItems.forEach(nav => nav.classList.remove('active'));
-                    // Add active class to clicked item
-                    this.classList.add('active');
-                });
-            });
-
-            // LinkedIn button functionality
-            const linkedinBtn = document.querySelector('.linkedin-btn');
-            linkedinBtn.addEventListener('click', function() {
-                // Add a subtle animation effect
-                this.style.transform = 'scale(0.98) translateY(-1px)';
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-1px)';
-                }, 150);
-                
-                // You can add actual LinkedIn URL here
-                // window.open('https://linkedin.com/in/your-profile', '_blank');
-                console.log('LinkedIn button clicked');
-            });
-
-            // Add smooth scroll behavior for potential future sections
-            document.documentElement.style.scrollBehavior = 'smooth';
-        });
-    </script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
