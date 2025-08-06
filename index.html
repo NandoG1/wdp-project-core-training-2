@@ -215,6 +215,156 @@
         </div>
     </section>
 
+    <section class="achievements-section">
+        <div class="achievements-container">
+            <h2 class="achievements-title">My Achievements</h2>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" onclick="prevSlide()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active">
+                            <div class="achievement-card">
+                                <div class="achievement-image">
+                                    <img src="https://via.placeholder.com/500x250/4299e1/ffffff?text=Best+UI/UX+Design+Award+2025" alt="Achievement 1">
+                                </div>
+                                <div class="achievement-content">
+                                    <h3 class="achievement-title">Best UI/UX Design Award 2025</h3>
+                                    <p class="achievement-description">
+                                        Recognized for exceptional user interface design and user experience in the 
+                                        annual DesignHub competition. The project focused on accessibility and 
+                                        innovative interaction patterns.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="achievement-card">
+                                <div class="achievement-image">
+                                    <img src="https://via.placeholder.com/500x250/48bb78/ffffff?text=Frontend+Developer+of+the+Year+2024" alt="Achievement 2">
+                                </div>
+                                <div class="achievement-content">
+                                    <h3 class="achievement-title">Frontend Developer of the Year 2024</h3>
+                                    <p class="achievement-description">
+                                        Awarded by TechCommunity for outstanding contributions to open source projects 
+                                        and innovative frontend solutions. Recognized for creating responsive and 
+                                        performance-optimized web applications.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="achievement-card">
+                                <div class="achievement-image">
+                                    <img src="https://via.placeholder.com/500x250/ed8936/ffffff?text=Innovation+Excellence+Award+2024" alt="Achievement 3">
+                                </div>
+                                <div class="achievement-content">
+                                    <h3 class="achievement-title">Innovation Excellence Award 2024</h3>
+                                    <p class="achievement-description">
+                                        Honored for developing cutting-edge design systems and implementing creative 
+                                        solutions that improved user engagement by 150%. The project revolutionized 
+                                        how users interact with digital products.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn next-btn" onclick="nextSlide()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-indicators">
+                <button class="indicator active" onclick="goToSlide(0)"></button>
+                <button class="indicator" onclick="goToSlide(1)"></button>
+                <button class="indicator" onclick="goToSlide(2)"></button>
+            </div>
+        </div>
+    </section>
+
+        <!-- Educational History Section -->
+        <section class="education-section">
+            <div class="education-container">
+                <h2 class="education-title">Educational History</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="degree-title">Master's Degree in UX Design</h3>
+                                <span class="timeline-date">2023 - 2025</span>
+                            </div>
+                            <div class="institution">Stanford University</div>
+                            <p class="description">
+                                Specialized in interaction design and user research methodologies. Completed 
+                                thesis on "Enhancing User Engagement Through Microinteractions in Mobile 
+                                Applications" with distinction.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="degree-title">Bachelor's Degree in Computer Science</h3>
+                                <span class="timeline-date">2023 - 2024</span>
+                            </div>
+                            <div class="institution">MIT</div>
+                            <p class="description">
+                                Focused on web development and human-computer interaction. Participated in 
+                                multiple hackathons and won first place in the university's annual app 
+                                development competition.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="degree-title">UI/UX Design Certification</h3>
+                                <span class="timeline-date">2021 - 2022</span>
+                            </div>
+                            <div class="institution">Google UX Design Professional Certificate</div>
+                            <p class="description">
+                                Comprehensive certification covering the entire UX design process from research 
+                                to high-fidelity prototyping. Completed 7 courses with hands-on projects for real-world applications.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="degree-title">Advanced Frontend Development</h3>
+                                <span class="timeline-date">2020 - 2021</span>
+                            </div>
+                            <div class="institution">Frontend Masters</div>
+                            <p class="description">
+                                Specialized bootcamp focused on modern JavaScript frameworks, responsive 
+                                design techniques, and performance optimization. Created portfolio of 5 
+                                production-ready web applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <script>
         // Navigation menu functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -312,6 +462,36 @@
                     }
                 });
             });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-menu li');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+
+            // LinkedIn button functionality
+            const linkedinBtn = document.querySelector('.linkedin-btn');
+            linkedinBtn.addEventListener('click', function() {
+                // Add a subtle animation effect
+                this.style.transform = 'scale(0.98) translateY(-1px)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-1px)';
+                }, 150);
+                
+                // You can add actual LinkedIn URL here
+                // window.open('https://linkedin.com/in/your-profile', '_blank');
+                console.log('LinkedIn button clicked');
+            });
+
+            // Add smooth scroll behavior for potential future sections
+            document.documentElement.style.scrollBehavior = 'smooth';
         });
     </script>
 <script src="script.js"></script>
