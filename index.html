@@ -1,452 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon">M</div>
-                <span>Mortovolio</span>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li>Greeting</li>
-                    <li>Skills</li>
-                    <li>Achievements</li>
-                    <li>Targets</li>
-                    <li>Education</li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio Website</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="nav-container">
+				<div class="logo">
+					<div class="logo-icon">M</div>
+					<span>Mortovolio</span>
+				</div>
+				<nav>
+					<ul class="nav-menu">
+						<li>Greeting</li>
+						<li>Skills</li>
+						<li>Achievements</li>
+						<li>Targets</li>
+						<li>Education</li>
+					</ul>
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+				</nav>
+			</div>
+		</header>
 
-    <main class="main-container">
-        <section class="content-section" id="greeting">
-            <h1 class="greeting">Hello, I'm Nando</h1>
-            <p class="description">
-                I'm a passionate UI/UX designer and frontend developer with over 15 years 
-                of experience creating intuitive, engaging digital experiences. I believe in 
-                user-centered design principles and enjoy solving complex problems with 
-                elegant solutions.
-            </p>
-            <a href="" class="linkedin-btn">
-                <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
-                </svg>
-                Connect on LinkedIn              
-            </a>
-        </section>
+		<main class="main-container">
+			<section class="content-section" id="greeting">
+				<h1 class="greeting">Hello, I'm Nando</h1>
+				<p class="description">I'm a passionate UI/UX designer and frontend developer with over 15 years of experience creating intuitive, engaging digital experiences. I believe in user-centered design principles and enjoy solving complex problems with elegant solutions.</p>
+				<a href="https://www.linkedin.com/in/fernando-gunawan-bo/" class="linkedin-btn">
+					<svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+					</svg>
+					Connect on LinkedIn
+				</a>
+			</section>
 
-        <section class="avatar-section">
-            <div class="avatar-container">
-                <div class="avatar">
-                    <img src="assets/Open Peeps - Avatar (3).png" alt="My Avatar" class="avatar-image">
-                </div>
-            </div>
-        </section>
-    </main>
+			<section class="avatar-section">
+				<div class="avatar-container">
+					<div class="avatar">
+						<img src="assets/Open Peeps - Avatar (3).png" alt="My Avatar" class="avatar-image" />
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <section class="skills-section" id="skills">
-        <div class="skills-container">
-            <h2 class="skills-title">My Skills</h2>
-            
-            <div class="skills-tabs">
-                <button class="tab-button active" onclick="showTab('technical')">Technical Skills</button>
-                <button class="tab-button" onclick="showTab('soft')">Soft Skills</button>
-            </div>
+		<section class="skills-section" id="skills">
+			<div class="skills-container">
+				<h2 class="skills-title">My Skills</h2>
 
-            <div class="tabs-wrapper">
-                <div id="technical-skills" class="tab-content active">
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                            </div>
-                            <div class="skill-name">HTML/CSS</div>
-                            <div class="skill-progress">
-                               
-                            </div>
-                        </div>
+				<div class="skills-tabs">
+					<button class="tab-button active" onclick="showTab('technical')">Technical Skills</button>
+					<button class="tab-button" onclick="showTab('soft')">Soft Skills</button>
+				</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                            </div>
-                            <div class="skill-name">JavaScript</div>
-                            <div class="skill-progress">
+				<div class="tabs-wrapper">
+					<div id="technical-skills" class="tab-content active">
+						<div class="skills-grid">
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
+										<polyline points="16 18 22 12 16 6"></polyline>
+										<polyline points="8 6 2 12 8 18"></polyline>
+									</svg>
+								</div>
+								<div class="skill-name">HTML/CSS</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+								</div>
+								<div class="skill-name">JavaScript</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                            </div>
-                            <div class="skill-name">React</div>
-                            <div class="skill-progress">
-                               
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
+										<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+										<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+										<line x1="12" y1="22.08" x2="12" y2="12"></line>
+									</svg>
+								</div>
+								<div class="skill-name">React</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-figma"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path></svg>
-                            </div>
-                            <div class="skill-name">Figma</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-figma">
+										<path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+										<path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+										<path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path>
+										<path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+									</svg>
+								</div>
+								<div class="skill-name">Figma</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-                            </div>
-                            <div class="skill-name">Responsive</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone">
+										<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+										<line x1="12" y1="18" x2="12.01" y2="18"></line>
+									</svg>
+								</div>
+								<div class="skill-name">Responsive</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                            </div>
-                            <div class="skill-name">SQL</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database">
+										<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+										<path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+										<path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+									</svg>
+								</div>
+								<div class="skill-name">SQL</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
-                            </div>
-                            <div class="skill-name">Git</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch">
+										<line x1="6" y1="3" x2="6" y2="15"></line>
+										<circle cx="18" cy="6" r="3"></circle>
+										<circle cx="6" cy="18" r="3"></circle>
+										<path d="M18 9a9 9 0 0 1-9 9"></path>
+									</svg>
+								</div>
+								<div class="skill-name">Git</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-                            </div>
-                            <div class="skill-name">UI Design</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool">
+										<path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+										<path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+										<path d="M2 2l7.586 7.586"></path>
+										<circle cx="11" cy="11" r="2"></circle>
+									</svg>
+								</div>
+								<div class="skill-name">UI Design</div>
+								<div class="skill-progress"></div>
+							</div>
+						</div>
+					</div>
 
-                <div id="soft-skills" class="tab-content">
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                            </div>
-                            <div class="skill-name">Communication</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+					<div id="soft-skills" class="tab-content">
+						<div class="skills-grid">
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+								</div>
+								<div class="skill-name">Communication</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            </div>
-                            <div class="skill-name">Teamwork</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+										<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+										<circle cx="9" cy="7" r="4"></circle>
+										<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+										<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+									</svg>
+								</div>
+								<div class="skill-name">Teamwork</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                            </div>
-                            <div class="skill-name">Problem Solving</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle">
+										<circle cx="12" cy="12" r="10"></circle>
+										<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+										<line x1="12" y1="17" x2="12.01" y2="17"></line>
+									</svg>
+								</div>
+								<div class="skill-name">Problem Solving</div>
+								<div class="skill-progress"></div>
+							</div>
 
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-                            </div>
-                            <div class="skill-name">Adaptability</div>
-                            <div class="skill-progress">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<div class="skill-card">
+								<div class="skill-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw">
+										<polyline points="23 4 23 10 17 10"></polyline>
+										<polyline points="1 20 1 14 7 14"></polyline>
+										<path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+									</svg>
+								</div>
+								<div class="skill-name">Adaptability</div>
+								<div class="skill-progress"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="achievements-section" id="achievements">
-        <div class="achievements-container">
-            <h2 class="achievements-title">My Achievements</h2>
-            
-            <div class="carousel-container">
-                <button class="carousel-btn prev-btn" onclick="manualPrevSlide()">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                    </svg>
-                </button>
-                
-                <div class="carousel-wrapper">
-                    <div class="carousel-track" id="carouselTrack">
-                        <div class="carousel-slide active">
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="assets/img-5.jpg" alt="Achievement 1">
-                                </div>
-                                <div class="achievement-content">
-                                    <h3 class="achievement-title">Best UI/UX Design Award 2025</h3>
-                                    <p class="achievement-description">
-                                        Recognized for exceptional user interface design and user experience in the 
-                                        annual DesignHub competition. The project focused on accessibility and 
-                                        innovative interaction patterns.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-slide">
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="assets/best-school-team.jpg" alt="Achievement 2">
-                                </div>
-                                <div class="achievement-content">
-                                    <h3 class="achievement-title">Frontend Developer of the Year 2024</h3>
-                                    <p class="achievement-description">
-                                        Awarded by TechCommunity for outstanding contributions to open source projects 
-                                        and innovative frontend solutions. Recognized for creating responsive and 
-                                        performance-optimized web applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-slide">
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="assets/Winners-Pagina-Interna-2024-Guardiola.jpg" alt="Achievement 3">
-                                </div>
-                                <div class="achievement-content">
-                                    <h3 class="achievement-title">Innovation Excellence Award 2024</h3>
-                                    <p class="achievement-description">
-                                        Honored for developing cutting-edge design systems and implementing creative 
-                                        solutions that improved user engagement by 150%. The project revolutionized 
-                                        how users interact with digital products.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="carousel-btn next-btn" onclick="manualNextSlide()">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="carousel-indicators">
-                <button class="indicator active" onclick="goToSlide(0)"></button>
-                <button class="indicator" onclick="goToSlide(1)"></button>
-                <button class="indicator" onclick="goToSlide(2)"></button>
-            </div>
-        </div>
-    </section>
+		<section class="achievements-section" id="achievements">
+			<div class="achievements-container">
+				<h2 class="achievements-title">My Achievements</h2>
 
-    <section class="education-section" id="targets">
-        <div class="education-container">
-            <h2 class="education-title">Personal Target & Action</h2>
-            
-            <div class="education-cards">
-                <div class="education-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                            </div>
-                            <h3 class="card-title">Master Advanced JS</h3>
-                            <p class="card-description">Become proficient in modern JavaScript frameworks and libraries to build more complex applications.</p>
-                        </div>
-                        <div class="card-back">
-                            <h3 class="action-title">Action Plan:</h3>
-                            <ul class="action-list">
-                                <li>✓ Complete 3 advanced React course</li>
-                                <li>✓ Build 5 project with React and NextJS</li>
-                                <li>✓ Contribute to open-source React projects</li>
-                                <li>✓ Attend React conference in 2025</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+				<div class="carousel-container">
+					<button class="carousel-btn prev-btn" onclick="manualPrevSlide()">
+						<svg viewBox="0 0 24 24" fill="currentColor">
+							<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+						</svg>
+					</button>
 
-                <div class="education-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-                            </div>
-                            <h3 class="card-title">Improve UI/UX Design</h3>
-                            <p class="card-description">Enhance my design capabilities to create more intuitive and visually appealing interfaces.</p>
-                        </div>
-                        <div class="card-back">
-                            <h3 class="action-title">Action Plan:</h3>
-                            <ul class="action-list">
-                                <li>✓ Complete advanced Figma masterclass</li>
-                                <li>✓ Study 10 case studies from top designers</li>
-                                <li>✓ Redesign 3 existing websites/apps</li>
-                                <li>✓ Get UI/UX certification by December 2025</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+					<div class="carousel-wrapper">
+						<div class="carousel-track" id="carouselTrack">
+							<div class="carousel-slide active">
+								<div class="achievement-card">
+									<div class="achievement-image">
+										<img src="assets/img-5.jpg" alt="Achievement 1" />
+									</div>
+									<div class="achievement-content">
+										<h3 class="achievement-title">Best UI/UX Design Award 2025</h3>
+										<p class="achievement-description">Recognized for exceptional user interface design and user experience in the annual DesignHub competition. The project focused on accessibility and innovative interaction patterns.</p>
+									</div>
+								</div>
+							</div>
 
-                <div class="education-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                            </div>
-                            <h3 class="card-title">Lead a Design Team</h3>
-                            <p class="card-description">Develop leadership skills to effectively manage and guide a team of designers and developers. </p>
-                        </div>
-                        <div class="card-back">
-                            <h3 class="action-title">Action Plan:</h3>
-                            <ul class="action-list">
-                                <li>✓ Complete leadership training program</li>
-                                <li>✓ Mentor 3 junior designers</li>
-                                <li>✓ Lead 2 small projects from start to finish</li>
-                                <li>✓ Develop team management framework</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<div class="carousel-slide">
+								<div class="achievement-card">
+									<div class="achievement-image">
+										<img src="assets/best-school-team.jpg" alt="Achievement 2" />
+									</div>
+									<div class="achievement-content">
+										<h3 class="achievement-title">Frontend Developer of the Year 2024</h3>
+										<p class="achievement-description">Awarded by TechCommunity for outstanding contributions to open source projects and innovative frontend solutions. Recognized for creating responsive and performance-optimized web applications.</p>
+									</div>
+								</div>
+							</div>
 
-    <section class="education-section" id="education">
-        <div class="education-container">
-            <h2 class="education-title">Educational History</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="degree-title">Master's Degree in UX Design</h3>
-                            <span class="timeline-date">2023 - 2025</span>
-                        </div>
-                        <div class="institution">Stanford University</div>
-                        <p class="description">
-                            Specialized in interaction design and user research methodologies. Completed 
-                            thesis on "Enhancing User Engagement Through Microinteractions in Mobile 
-                            Applications" with distinction.
-                        </p>
-                    </div>
-                </div>
+							<div class="carousel-slide">
+								<div class="achievement-card">
+									<div class="achievement-image">
+										<img src="assets/Winners-Pagina-Interna-2024-Guardiola.jpg" alt="Achievement 3" />
+									</div>
+									<div class="achievement-content">
+										<h3 class="achievement-title">Innovation Excellence Award 2024</h3>
+										<p class="achievement-description">Honored for developing cutting-edge design systems and implementing creative solutions that improved user engagement by 150%. The project revolutionized how users interact with digital products.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="degree-title">Bachelor's Degree in Computer Science</h3>
-                            <span class="timeline-date">2023 - 2024</span>
-                        </div>
-                        <div class="institution">MIT</div>
-                        <p class="description">
-                            Focused on web development and human-computer interaction. Participated in 
-                            multiple hackathons and won first place in the university's annual app 
-                            development competition.
-                        </p>
-                    </div>
-                </div>
+					<button class="carousel-btn next-btn" onclick="manualNextSlide()">
+						<svg viewBox="0 0 24 24" fill="currentColor">
+							<path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+						</svg>
+					</button>
+				</div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="degree-title">UI/UX Design Certification</h3>
-                            <span class="timeline-date">2021 - 2022</span>
-                        </div>
-                        <div class="institution">Google UX Design Professional Certificate</div>
-                        <p class="description">
-                            Comprehensive certification covering the entire UX design process from research 
-                            to high-fidelity prototyping. Completed 7 courses with hands-on projects for real-world applications.
-                        </p>
-                    </div>
-                </div>
+				<div class="carousel-indicators">
+					<button class="indicator active" onclick="goToSlide(0)"></button>
+					<button class="indicator" onclick="goToSlide(1)"></button>
+					<button class="indicator" onclick="goToSlide(2)"></button>
+				</div>
+			</div>
+		</section>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="degree-title">Advanced Frontend Development</h3>
-                            <span class="timeline-date">2020 - 2021</span>
-                        </div>
-                        <div class="institution">Frontend Masters</div>
-                        <p class="description">
-                            Specialized bootcamp focused on modern JavaScript frameworks, responsive 
-                            design techniques, and performance optimization. Created portfolio of 5 
-                            production-ready web applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="education-section" id="targets">
+			<div class="education-container">
+				<h2 class="education-title">Personal Target & Action</h2>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <div class="footer-logo-icon">M</div>
-                        <span class="footer-logo-text">Mortovolio</span>
-                    </div>
-                    <p class="footer-tagline">Crafting digital experiences that delight users</p>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link github" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Mortovolio. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-</body>
+				<div class="education-cards">
+					<div class="education-card">
+						<div class="card-inner">
+							<div class="card-front">
+								<div class="card-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
+										<polyline points="16 18 22 12 16 6"></polyline>
+										<polyline points="8 6 2 12 8 18"></polyline>
+									</svg>
+								</div>
+								<h3 class="card-title">Master Advanced JS</h3>
+								<p class="card-description">Become proficient in modern JavaScript frameworks and libraries to build more complex applications.</p>
+							</div>
+							<div class="card-back">
+								<h3 class="action-title">Action Plan:</h3>
+								<ul class="action-list">
+									<li>✓ Complete 3 advanced React course</li>
+									<li>✓ Build 5 project with React and NextJS</li>
+									<li>✓ Contribute to open-source React projects</li>
+									<li>✓ Attend React conference in 2025</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="education-card">
+						<div class="card-inner">
+							<div class="card-front">
+								<div class="card-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool">
+										<path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+										<path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+										<path d="M2 2l7.586 7.586"></path>
+										<circle cx="11" cy="11" r="2"></circle>
+									</svg>
+								</div>
+								<h3 class="card-title">Improve UI/UX Design</h3>
+								<p class="card-description">Enhance my design capabilities to create more intuitive and visually appealing interfaces.</p>
+							</div>
+							<div class="card-back">
+								<h3 class="action-title">Action Plan:</h3>
+								<ul class="action-list">
+									<li>✓ Complete advanced Figma masterclass</li>
+									<li>✓ Study 10 case studies from top designers</li>
+									<li>✓ Redesign 3 existing websites/apps</li>
+									<li>✓ Get UI/UX certification by December 2025</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="education-card">
+						<div class="card-inner">
+							<div class="card-front">
+								<div class="card-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
+										<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+										<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+									</svg>
+								</div>
+								<h3 class="card-title">Lead a Design Team</h3>
+								<p class="card-description">Develop leadership skills to effectively manage and guide a team of designers and developers.</p>
+							</div>
+							<div class="card-back">
+								<h3 class="action-title">Action Plan:</h3>
+								<ul class="action-list">
+									<li>✓ Complete leadership training program</li>
+									<li>✓ Mentor 3 junior designers</li>
+									<li>✓ Lead 2 small projects from start to finish</li>
+									<li>✓ Develop team management framework</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="education-section" id="education">
+			<div class="education-container">
+				<h2 class="education-title">Educational History</h2>
+
+				<div class="timeline">
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-content">
+							<div class="timeline-header">
+								<h3 class="degree-title">Master's Degree in UX Design</h3>
+								<span class="timeline-date">2023 - 2025</span>
+							</div>
+							<div class="institution">Stanford University</div>
+							<p class="description">Specialized in interaction design and user research methodologies. Completed thesis on "Enhancing User Engagement Through Microinteractions in Mobile Applications" with distinction.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-content">
+							<div class="timeline-header">
+								<h3 class="degree-title">Bachelor's Degree in Computer Science</h3>
+								<span class="timeline-date">2023 - 2024</span>
+							</div>
+							<div class="institution">MIT</div>
+							<p class="description">Focused on web development and human-computer interaction. Participated in multiple hackathons and won first place in the university's annual app development competition.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-content">
+							<div class="timeline-header">
+								<h3 class="degree-title">UI/UX Design Certification</h3>
+								<span class="timeline-date">2021 - 2022</span>
+							</div>
+							<div class="institution">Google UX Design Professional Certificate</div>
+							<p class="description">Comprehensive certification covering the entire UX design process from research to high-fidelity prototyping. Completed 7 courses with hands-on projects for real-world applications.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-content">
+							<div class="timeline-header">
+								<h3 class="degree-title">Advanced Frontend Development</h3>
+								<span class="timeline-date">2020 - 2021</span>
+							</div>
+							<div class="institution">Frontend Masters</div>
+							<p class="description">Specialized bootcamp focused on modern JavaScript frameworks, responsive design techniques, and performance optimization. Created portfolio of 5 production-ready web applications.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-content">
+					<div class="footer-brand">
+						<div class="footer-logo">
+							<div class="footer-logo-icon">M</div>
+							<span class="footer-logo-text">Mortovolio</span>
+						</div>
+						<p class="footer-tagline">Crafting digital experiences that delight users</p>
+					</div>
+
+					<div class="footer-social">
+						<a href="https://www.linkedin.com/in/fernando-gunawan-bo/" class="social-link linkedin" aria-label="LinkedIn">
+							<svg viewBox="0 0 24 24" fill="currentColor">
+								<path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+							</svg>
+						</a>
+						<a href="https://github.com/NandoG1" class="social-link github" aria-label="GitHub">
+							<svg viewBox="0 0 24 24" fill="currentColor">
+								<path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p class="footer-copyright">© 2025 Mortovolio. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
 </html>
