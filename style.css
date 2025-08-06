@@ -388,15 +388,22 @@ body {
 }
 
 .skill-card {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 12px;
-    padding: 2.5rem 2rem;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
     border: 1px solid #f0f0f0;
+}
+
+.skill-icon svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: #2c3e50;
 }
 
 .skill-card:hover {
