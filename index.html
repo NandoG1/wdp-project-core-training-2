@@ -4,388 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mortovolio - Nando Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Header Navigation */
-        .header {
-            background-color: white;
-            padding: 0 3rem;
-            border-bottom: 1px solid #e9ecef;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-weight: 500;
-            font-size: 1rem;
-            color: #333;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background-color: #4a5568;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 3rem;
-        }
-
-        .nav-menu li {
-            cursor: pointer;
-            color: #718096;
-            font-weight: 400;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-menu li:hover {
-            color: #2d3748;
-        }
-
-        .nav-menu li.active {
-            color: #2d3748;
-            font-weight: 500;
-        }
-
-        /* Main Content */
-        .main-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 8rem 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 80vh;
-        }
-
-        .content-section {
-            flex: 1;
-            max-width: 550px;
-        }
-
-        .greeting {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 2.5rem;
-            line-height: 1.1;
-        }
-
-        .description {
-            font-size: 1.125rem;
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            max-width: 520px;
-        }
-
-        .linkedin-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.7rem;
-            background-color: #4a5568;
-            color: white;
-            padding: 1rem 1.8rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .linkedin-btn:hover {
-            background-color: #2d3748;
-            transform: translateY(-1px);
-        }
-
-        .linkedin-icon {
-            width: 18px;
-            height: 18px;
-        }
-
-        /* Avatar Section */
-        .avatar-section {
-            flex-shrink: 0;
-            margin-left: 5rem;
-        }
-
-        .avatar-container {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            border: 3px solid #1a202c;
-            overflow: hidden;
-            position: relative;
-            background-color: #f7fafc;
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #fbb6ce 0%, #f6ad55 100%);
-            position: relative;
-        }
-
-        /* Character Design */
-        .character {
-            position: relative;
-            width: 180px;
-            height: 200px;
-        }
-
-        /* Hair - Afro style */
-        .hair {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 160px;
-            height: 120px;
-            background-color: #1a202c;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .hair::before,
-        .hair::after {
-            content: '';
-            position: absolute;
-            background-color: #1a202c;
-            border-radius: 50%;
-        }
-
-        .hair::before {
-            top: 15px;
-            left: -20px;
-            width: 50px;
-            height: 70px;
-        }
-
-        .hair::after {
-            top: 15px;
-            right: -20px;
-            width: 50px;
-            height: 70px;
-        }
-
-        /* Additional hair texture */
-        .hair-texture {
-            position: absolute;
-            background-color: #1a202c;
-            border-radius: 50%;
-        }
-
-        .hair-texture:nth-child(1) {
-            top: 5px;
-            left: 20px;
-            width: 35px;
-            height: 50px;
-        }
-
-        .hair-texture:nth-child(2) {
-            top: 5px;
-            right: 20px;
-            width: 35px;
-            height: 50px;
-        }
-
-        .hair-texture:nth-child(3) {
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 45px;
-        }
-
-        /* Face */
-        .face {
-            position: absolute;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 110px;
-            height: 100px;
-            background-color: #d69e2e;
-            border-radius: 55px;
-            z-index: 2;
-        }
-
-        /* Eyes */
-        .eyes {
-            position: absolute;
-            top: 28px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 20px;
-        }
-
-        .eye {
-            position: absolute;
-            width: 12px;
-            height: 16px;
-            background-color: #1a202c;
-            border-radius: 50%;
-        }
-
-        .eye.left {
-            left: 10px;
-            transform: rotate(-10deg);
-        }
-
-        .eye.right {
-            right: 10px;
-            transform: rotate(10deg);
-        }
-
-        /* Eyebrows */
-        .eyebrow {
-            position: absolute;
-            width: 18px;
-            height: 4px;
-            background-color: #1a202c;
-            border-radius: 2px;
-            top: 15px;
-        }
-
-        .eyebrow.left {
-            left: 6px;
-            transform: rotate(15deg);
-        }
-
-        .eyebrow.right {
-            right: 6px;
-            transform: rotate(-15deg);
-        }
-
-        /* Mouth */
-        .mouth {
-            position: absolute;
-            top: 55px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 25px;
-            height: 15px;
-            border: 3px solid #1a202c;
-            border-top: none;
-            border-radius: 0 0 25px 25px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .main-container {
-                padding: 6rem 2rem;
-            }
-            
-            .avatar-section {
-                margin-left: 3rem;
-            }
-            
-            .avatar-container {
-                width: 280px;
-                height: 280px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                padding: 0 2rem;
-            }
-
-            .nav-menu {
-                gap: 1.5rem;
-                font-size: 0.9rem;
-            }
-
-            .main-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 4rem 2rem;
-            }
-
-            .avatar-section {
-                margin-left: 0;
-                margin-top: 3rem;
-            }
-
-            .avatar-container {
-                width: 240px;
-                height: 240px;
-            }
-
-            .greeting {
-                font-size: 2.8rem;
-            }
-
-            .description {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header {
-                padding: 0 1rem;
-            }
-
-            .nav-container {
-                padding: 1rem 0;
-            }
-
-            .nav-menu {
-                gap: 1rem;
-                font-size: 0.8rem;
-            }
-
-            .greeting {
-                font-size: 2.2rem;
-            }
-
-            .avatar-container {
-                width: 200px;
-                height: 200px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header Navigation -->
@@ -403,6 +22,11 @@
                     <li>Targets</li>
                     <li>Education</li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
         </div>
     </header>
@@ -421,7 +45,7 @@
                 <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
                 </svg>
-                Connect on LinkedIn
+                Connect on LinkedIn              
             </button>
         </section>
 
@@ -448,6 +72,148 @@
             </div>
         </section>
     </main>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="skills-container">
+            <h2 class="skills-title">My Skills</h2>
+            
+            <div class="skills-tabs">
+                <button class="tab-button active" onclick="showTab('technical')">Technical Skills</button>
+                <button class="tab-button" onclick="showTab('soft')">Soft Skills</button>
+            </div>
+
+            <div class="tabs-wrapper">
+                <div id="technical-skills" class="tab-content active">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-progress">
+                               
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-progress">
+
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">React</div>
+                            <div class="skill-progress">
+                               
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Figma</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Responsive</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">SQL</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Git</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">UI Design</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="soft-skills" class="tab-content">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Communication</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Teamwork</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Problem Solving</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                &lt;/&gt;
+                            </div>
+                            <div class="skill-name">Adaptability</div>
+                            <div class="skill-progress">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         // Navigation menu functionality
@@ -480,6 +246,74 @@
             // Add smooth scroll behavior for potential future sections
             document.documentElement.style.scrollBehavior = 'smooth';
         });
+
+        // Skills section functionality
+        function showTab(tabName) {
+            // Update tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Find the clicked button and make it active
+            const clickedButton = Array.from(tabButtons).find(btn => 
+                btn.textContent.toLowerCase().includes(tabName.toLowerCase())
+            );
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            }
+
+            // Update tab content with smooth animation
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Add a small delay for smooth transition
+            setTimeout(() => {
+                const targetTab = document.getElementById(tabName + '-skills');
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                    // Animate progress bars
+                    animateProgressBars();
+                }
+            }, 200);
+        }
+
+        function animateProgressBars() {
+            const activeTab = document.querySelector('.tab-content.active');
+            if (activeTab) {
+                const progressBars = activeTab.querySelectorAll('.skill-progress-fill');
+                
+                progressBars.forEach((bar, index) => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, index * 100);
+                });
+            }
+        }
+
+        // Add click event listeners to tab buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize progress bar animation on page load
+            setTimeout(() => {
+                animateProgressBars();
+            }, 1000);
+
+            // Add event listeners to tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.toLowerCase();
+                    if (buttonText.includes('technical')) {
+                        showTab('technical');
+                    } else if (buttonText.includes('soft')) {
+                        showTab('soft');
+                    }
+                });
+            });
+        });
     </script>
+<script src="script.js"></script>
 </body>
 </html>

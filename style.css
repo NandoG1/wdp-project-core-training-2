@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Navigation */
+.header {
+    background-color: white;
+    padding: 0 3rem;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    z-index: 101; /* Ensure logo is above mobile nav */
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #4a5568;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    color: #718096;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li:hover {
+    color: #2d3748;
+}
+
+.nav-menu li.active {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+}
+
+
+/* Main Content */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 8rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+
+.content-section {
+    flex: 1;
+    max-width: 550px;
+}
+
+.greeting {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 2.5rem;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 520px;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background-color: #4a5568;
+    color: white;
+    padding: 1rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.linkedin-btn:hover {
+    background-color: #2d3748;
+    transform: translateY(-1px);
+}
+
+.linkedin-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Avatar Section */
+.avatar-section {
+    flex-shrink: 0;
+    margin-left: 5rem;
+}
+
+.avatar-container {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid #1a202c;
+    overflow: hidden;
+    position: relative;
+    background-color: #f7fafc;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fbb6ce 0%, #f6ad55 100%);
+    position: relative;
+}
+
+/* Character Design */
+.character {
+    position: relative;
+    width: 180px;
+    height: 200px;
+}
+
+/* Hair - Afro style */
+.hair {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 120px;
+    background-color: #1a202c;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hair::before,
+.hair::after {
+    content: '';
+    position: absolute;
+    background-color: #1a202c;
+    border-radius: 50%;
+}
+
+.hair::before {
+    top: 15px;
+    left: -20px;
+    width: 50px;
+    height: 70px;
+}
+
+.hair::after {
+    top: 15px;
+    right: -20px;
+    width: 50px;
+    height: 70px;
+}
+
+/* Additional hair texture */
+.hair-texture {
+    position: absolute;
+    background-color: #1a202c;
+    border-radius: 50%;
+}
+
+.hair-texture:nth-child(1) {
+    top: 5px;
+    left: 20px;
+    width: 35px;
+    height: 50px;
+}
+
+.hair-texture:nth-child(2) {
+    top: 5px;
+    right: 20px;
+    width: 35px;
+    height: 50px;
+}
+
+.hair-texture:nth-child(3) {
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 45px;
+}
+
+/* Face */
+.face {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 100px;
+    background-color: #d69e2e;
+    border-radius: 55px;
+    z-index: 2;
+}
+
+/* Eyes */
+.eyes {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 20px;
+}
+
+.eye {
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    background-color: #1a202c;
+    border-radius: 50%;
+}
+
+.eye.left {
+    left: 10px;
+    transform: rotate(-10deg);
+}
+
+.eye.right {
+    right: 10px;
+    transform: rotate(10deg);
+}
+
+/* Eyebrows */
+.eyebrow {
+    position: absolute;
+    width: 18px;
+    height: 4px;
+    background-color: #1a202c;
+    border-radius: 2px;
+    top: 15px;
+}
+
+.eyebrow.left {
+    left: 6px;
+    transform: rotate(15deg);
+}
+
+.eyebrow.right {
+    right: 6px;
+    transform: rotate(-15deg);
+}
+
+/* Mouth */
+.mouth {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 15px;
+    border: 3px solid #1a202c;
+    border-top: none;
+    border-radius: 0 0 25px 25px;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #ffffff;
+    padding: 6rem 0;
+    margin-top: 4rem;
+}
+
+.skills-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.skills-tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4rem;
+    gap: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0;
+}
+
+.tab-button {
+    padding: 1rem 0;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #718096;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+    color: #1a202c;
+    font-weight: 600;
+    border-bottom: 2px solid #1a202c;
+}
+
+.tab-button:hover:not(.active) {
+    color: #4a5568;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #4a5568;
+    font-weight: bold;
+}
+
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 3px;
+    background-color: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4299e1 0%, #3182ce 100%);
+    border-radius: 2px;
+    transition: width 0.8s ease;
+}
+
+.tab-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    position: absolute;
+    width: 100%;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+.tabs-wrapper {
+    position: relative;
+    min-height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .skills-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skills-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 101; /* Ensure hamburger is above mobile nav */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        gap: 0;
+        padding-top: 6rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        padding: 1.5rem;
+    }
+    
+    .skills-tabs {
+        max-width: 300px;
+        padding: 0.3rem;
+    }
+    
+    .tab-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Original Responsive Design */
+@media (max-width: 1200px) {
+    .main-container {
+        padding: 6rem 2rem;
+    }
+    
+    .avatar-section {
+        margin-left: 3rem;
+    }
+    
+    .avatar-container {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 2rem;
+    }
+
+    .main-container {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .avatar-section {
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+
+    .avatar-container {
+        width: 240px;
+        height: 240px;
+    }
+
+    .greeting {
+        font-size: 2.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        padding: 1rem 0;
+    }
+
+    .greeting {
+        font-size: 2.2rem;
+    }
+
+    .avatar-container {
+        width: 200px;
+        height: 200px;
+    }
+}
