@@ -33,7 +33,6 @@ function nextSlide() {
     if (slides.length > 0) {
         currentSlide = (currentSlide + 1) % slides.length;
         updateCarousel();
-        resetAutoSlide();
     }
 }
 
@@ -41,8 +40,17 @@ function prevSlide() {
     if (slides.length > 0) {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateCarousel();
-        resetAutoSlide();
     }
+}
+
+function manualNextSlide() {
+    nextSlide();
+    resetAutoSlide();
+}
+
+function manualPrevSlide() {
+    prevSlide();
+    resetAutoSlide();
 }
 
 function goToSlide(index) {
