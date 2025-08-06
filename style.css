@@ -1120,6 +1120,156 @@ body {
     margin-bottom: 0;
 }
 
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #95a5a6;
+    padding: 4rem 0 2rem;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.footer-brand {
+    flex: 1;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-icon {
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer-logo-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.footer-tagline {
+    font-size: 1rem;
+    color: #95a5a6;
+    line-height: 1.5;
+    max-width: 300px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #95a5a6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #95a5a6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #95a5a6;
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 2rem;
+    }
+    
+    .footer-container {
+        padding: 0 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-tagline {
+        max-width: none;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 1rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
+    
+    .social-link {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-link svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .education-cards {
