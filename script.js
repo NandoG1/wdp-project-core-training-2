@@ -13,13 +13,20 @@ hamburger.addEventListener("click", () => {
 	}
 });
 
+// Carousel variables
 let currentSlide = 0;
 const slides = document.querySelectorAll(".carousel-slide");
 const indicators = document.querySelectorAll(".indicator");
 const track = document.getElementById("carouselTrack");
-let autoSlideInterval;
+let autoSlideInterval = null;
+let isTransitioning = false;
+let clickTimeout = null;
 
 function updateCarousel() {
+	if (isTransitioning) return;
+
+	isTransitioning = true;
+
 	// Update slides
 	slides.forEach((slide, index) => {
 		slide.classList.toggle("active", index === currentSlide);
@@ -34,45 +41,88 @@ function updateCarousel() {
 	if (track) {
 		track.style.transform = `translateX(-${currentSlide * 100}%)`;
 	}
+
+	// Reset transition flag after animation completes
+	setTimeout(() => {
+		isTransitioning = false;
+	}, 500); // Match the CSS transition duration
 }
 
 function nextSlide() {
-	if (slides.length > 0) {
+	if (slides.length > 0 && !isTransitioning) {
 		currentSlide = (currentSlide + 1) % slides.length;
 		updateCarousel();
 	}
 }
 
 function prevSlide() {
-	if (slides.length > 0) {
+	if (slides.length > 0 && !isTransitioning) {
 		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
 		updateCarousel();
 	}
 }
 
 function manualNextSlide() {
+	if (clickTimeout) return; // Prevent rapid clicking
+
+	clickTimeout = setTimeout(() => {
+		clickTimeout = null;
+	}, 300); // 300ms debounce
+
 	nextSlide();
 	resetAutoSlide();
 }
 
 function manualPrevSlide() {
+	if (clickTimeout) return; // Prevent rapid clicking
+
+	clickTimeout = setTimeout(() => {
+		clickTimeout = null;
+	}, 300); // 300ms debounce
+
 	prevSlide();
 	resetAutoSlide();
 }
 
 function goToSlide(index) {
+	if (isTransitioning || index === currentSlide) return;
+
 	currentSlide = index;
 	updateCarousel();
 	resetAutoSlide();
 }
 
 function startAutoSlide() {
-	autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+	// Clear any existing interval first
+	if (autoSlideInterval) {
+		clearInterval(autoSlideInterval);
+	}
+
+	autoSlideInterval = setInterval(() => {
+		if (!isTransitioning) {
+			nextSlide();
+		}
+	}, 3000); // Change slide every 3 seconds
 }
 
 function resetAutoSlide() {
-	clearInterval(autoSlideInterval);
-	startAutoSlide();
+	// Clear existing interval
+	if (autoSlideInterval) {
+		clearInterval(autoSlideInterval);
+		autoSlideInterval = null;
+	}
+
+	// Start new interval after a short delay
+	setTimeout(() => {
+		startAutoSlide();
+	}, 100);
+}
+
+function pauseAutoSlide() {
+	if (autoSlideInterval) {
+		clearInterval(autoSlideInterval);
+		autoSlideInterval = null;
+	}
 }
 
 // Initialize carousel when DOM is loaded
@@ -86,13 +136,25 @@ document.addEventListener("DOMContentLoaded", function () {
 		const carouselContainer = document.querySelector(".carousel-container");
 		if (carouselContainer) {
 			carouselContainer.addEventListener("mouseenter", () => {
-				clearInterval(autoSlideInterval);
+				pauseAutoSlide();
 			});
 
 			carouselContainer.addEventListener("mouseleave", () => {
 				startAutoSlide();
 			});
 		}
+
+		// Pause auto-slide on touch/click to prevent conflicts
+		const carouselButtons = document.querySelectorAll(".carousel-btn");
+		carouselButtons.forEach((button) => {
+			button.addEventListener("mousedown", () => {
+				pauseAutoSlide();
+			});
+
+			button.addEventListener("touchstart", () => {
+				pauseAutoSlide();
+			});
+		});
 	}
 });
 
