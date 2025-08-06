@@ -2,89 +2,180 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+	hamburger.classList.toggle("active");
+	navMenu.classList.toggle("active");
+
+	// Prevent body scrolling when mobile menu is open
+	if (navMenu.classList.contains("active")) {
+		document.body.style.overflow = "hidden";
+	} else {
+		document.body.style.overflow = "auto";
+	}
 });
 
 let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const indicators = document.querySelectorAll('.indicator');
-const track = document.getElementById('carouselTrack');
+const slides = document.querySelectorAll(".carousel-slide");
+const indicators = document.querySelectorAll(".indicator");
+const track = document.getElementById("carouselTrack");
 let autoSlideInterval;
 
 function updateCarousel() {
-    // Update slides
-    slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentSlide);
-    });
+	// Update slides
+	slides.forEach((slide, index) => {
+		slide.classList.toggle("active", index === currentSlide);
+	});
 
-    // Update indicators
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentSlide);
-    });
+	// Update indicators
+	indicators.forEach((indicator, index) => {
+		indicator.classList.toggle("active", index === currentSlide);
+	});
 
-    // Move track
-    if (track) {
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
+	// Move track
+	if (track) {
+		track.style.transform = `translateX(-${currentSlide * 100}%)`;
+	}
 }
 
 function nextSlide() {
-    if (slides.length > 0) {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateCarousel();
-    }
+	if (slides.length > 0) {
+		currentSlide = (currentSlide + 1) % slides.length;
+		updateCarousel();
+	}
 }
 
 function prevSlide() {
-    if (slides.length > 0) {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel();
-    }
+	if (slides.length > 0) {
+		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+		updateCarousel();
+	}
 }
 
 function manualNextSlide() {
-    nextSlide();
-    resetAutoSlide();
+	nextSlide();
+	resetAutoSlide();
 }
 
 function manualPrevSlide() {
-    prevSlide();
-    resetAutoSlide();
+	prevSlide();
+	resetAutoSlide();
 }
 
 function goToSlide(index) {
-    currentSlide = index;
-    updateCarousel();
-    resetAutoSlide();
+	currentSlide = index;
+	updateCarousel();
+	resetAutoSlide();
 }
 
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+	autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
 }
 
 function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
+	clearInterval(autoSlideInterval);
+	startAutoSlide();
 }
 
 // Initialize carousel when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Only initialize carousel if elements exist
-    if (slides.length > 0 && indicators.length > 0 && track) {
-        updateCarousel();
-        startAutoSlide();
+document.addEventListener("DOMContentLoaded", function () {
+	// Only initialize carousel if elements exist
+	if (slides.length > 0 && indicators.length > 0 && track) {
+		updateCarousel();
+		startAutoSlide();
 
-        // Pause auto-slide on hover
-        const carouselContainer = document.querySelector('.carousel-container');
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-            });
-            
-            carouselContainer.addEventListener('mouseleave', () => {
-                startAutoSlide();
-            });
-        }
-    }
+		// Pause auto-slide on hover
+		const carouselContainer = document.querySelector(".carousel-container");
+		if (carouselContainer) {
+			carouselContainer.addEventListener("mouseenter", () => {
+				clearInterval(autoSlideInterval);
+			});
+
+			carouselContainer.addEventListener("mouseleave", () => {
+				startAutoSlide();
+			});
+		}
+	}
+});
+
+// Smooth scrolling navigation functionality
+document.addEventListener("DOMContentLoaded", function () {
+	const navItems = document.querySelectorAll(".nav-menu li");
+
+	// Map navigation items to their corresponding sections
+	const sectionMap = {
+		Greeting: "greeting",
+		Skills: "skills",
+		Achievements: "achievements",
+		Targets: "targets",
+		Education: "education",
+	};
+
+	navItems.forEach((item) => {
+		item.addEventListener("click", function () {
+			const sectionName = this.textContent.trim();
+			const targetId = sectionMap[sectionName];
+
+			if (targetId) {
+				const targetSection = document.getElementById(targetId);
+				if (targetSection) {
+					// Close mobile menu if open
+					hamburger.classList.remove("active");
+					navMenu.classList.remove("active");
+					document.body.style.overflow = "auto";
+
+					// Smooth scroll to section with offset for fixed header
+					const headerHeight = document.querySelector(".header").offsetHeight;
+					const targetPosition = targetSection.offsetTop - headerHeight;
+
+					window.scrollTo({
+						top: targetPosition,
+						behavior: "smooth",
+					});
+
+					// Update active state
+					navItems.forEach((nav) => nav.classList.remove("active"));
+					this.classList.add("active");
+				}
+			}
+		});
+	});
+
+	// Close mobile menu when clicking outside
+	document.addEventListener("click", function (event) {
+		const isClickInsideNav = navMenu.contains(event.target);
+		const isClickOnHamburger = hamburger.contains(event.target);
+
+		if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains("active")) {
+			hamburger.classList.remove("active");
+			navMenu.classList.remove("active");
+			document.body.style.overflow = "auto";
+		}
+	});
+
+	// Close mobile menu when clicking on a nav item
+	navItems.forEach((item) => {
+		item.addEventListener("click", function () {
+			hamburger.classList.remove("active");
+			navMenu.classList.remove("active");
+			document.body.style.overflow = "auto";
+		});
+	});
+
+	// Update active nav item based on scroll position
+	window.addEventListener("scroll", function () {
+		const sections = Object.values(sectionMap)
+			.map((id) => document.getElementById(id))
+			.filter(Boolean);
+		const headerHeight = document.querySelector(".header").offsetHeight;
+		const scrollPosition = window.scrollY + headerHeight + 50; // Offset for header height + some padding
+
+		sections.forEach((section, index) => {
+			const sectionTop = section.offsetTop;
+			const sectionHeight = section.offsetHeight;
+
+			if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+				navItems.forEach((nav) => nav.classList.remove("active"));
+				navItems[index].classList.add("active");
+			}
+		});
+	});
 });
