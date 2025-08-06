@@ -56,6 +56,7 @@ function prevSlide() {
 	}
 }
 
+// Slide
 function manualNextSlide() {
 	if (clickTimeout) return;
 
@@ -67,6 +68,7 @@ function manualNextSlide() {
 	resetAutoSlide();
 }
 
+// Slide
 function manualPrevSlide() {
 	if (clickTimeout) return;
 
@@ -78,6 +80,7 @@ function manualPrevSlide() {
 	resetAutoSlide();
 }
 
+// Slide
 function goToSlide(index) {
 	if (isTransitioning || index === currentSlide) return;
 
